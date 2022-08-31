@@ -6,6 +6,7 @@ import About from "../components/community/About";
 import Feed from "../components/feed";
 import useSWR from "swr";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const style = {
   wrapper: `flex min-h-screen flex-col bg-black text-white`,
@@ -17,7 +18,10 @@ const style = {
 const Home: NextPage = () => {
   const [myPosts, setMyPosts] = useState([]);
 
-  const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
+  // const fetcher = (...args: any[]) => fetch(...args).then((res) => res.json());
+
+  const fetcher = (url: string) => axios.get(url).then((res) => res.data);
+
   const { data, error } = useSWR("/api/get-post", fetcher, {
     refreshInterval: 200,
   });
