@@ -6,9 +6,7 @@ const style = {
   wrapper: "flex flex-col items-center",
 };
 
-const Vote = () => {
-  const upvote = 110;
-  const downvote = 5;
+const Vote = ({ upvote, downvote }) => {
   return (
     <>
       <div className={style.wrapper}>

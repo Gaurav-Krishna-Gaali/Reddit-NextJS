@@ -9,18 +9,14 @@ const style = {
   postContent: "text-sm text-[#3D7DADC]/80 font-light",
 };
 
-const Post = ({ id, title, author }) => {
+const Post = ({ id, title, author, content, upvote, downvote, created_at }) => {
   return (
     <div className={style.wrapper}>
-      <Vote />
+      <Vote upvote={upvote} downvote={downvote} />
       <div className={style.post}>
-        <Info author={author} />
+        <Info author={author} created_at={created_at} />
         <h1 className={style.postTitle}>{title}</h1>
-        <p className={style.postContent}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic?
-          Quisquam harum magni fugiat sapiente ad. Nihil reiciendis inventore
-          deleniti unde neque fuga, corporis facere?
-        </p>
+        <p className={style.postContent}>{content}</p>
         <Actions className={style.actions} />
       </div>
     </div>
