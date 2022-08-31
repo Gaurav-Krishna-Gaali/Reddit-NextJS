@@ -1,5 +1,5 @@
 import Header from "../components/header";
-import About from "../components/community/about";
+import About from "../components/community/About";
 import PostForm from "/components/new/PostForm";
 
 const New = () => {
