@@ -9,13 +9,13 @@ const style = {
   postContent: "text-sm text-[#3D7DADC]/80 font-light",
 };
 
-const Post = () => {
+const Post = ({ id, title, author }) => {
   return (
     <div className={style.wrapper}>
       <Vote />
       <div className={style.post}>
-        <Info />
-        <h1 className={style.postTitle}>Reddit Clone</h1>
+        <Info author={author} />
+        <h1 className={style.postTitle}>{title}</h1>
         <p className={style.postContent}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. At, hic?
           Quisquam harum magni fugiat sapiente ad. Nihil reiciendis inventore
