@@ -2,6 +2,8 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { supabase } from "../../services/supabaseClient";
 
+import Loading from "../Loading";
+
 const style = {
   wrapper: "flex flex-col space-y-6",
   input:
@@ -40,6 +42,7 @@ const PostForm = () => {
   };
   return (
     <div className={style.wrapper}>
+      {isLoading && <Loading />}
       <h1 className={style.title}>Create a new post</h1>
 
       <div className="flex flex-col space-y-2 rounded bg-[#1a1a1b] p-4">
