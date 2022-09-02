@@ -57,7 +57,7 @@ const Home: NextPage = () => {
   return <>{currentUser ? <HomePage myPosts={myPosts} /> : <Login />}</>;
 };
 
-const HomePage = ({ myPosts }) => {
+const HomePage = ({ myPosts }: { myPosts: any }) => {
   return (
     <div className={style.wrapper}>
       <Header />
