@@ -6,7 +6,6 @@ import About from "../components/community/About";
 import Feed from "../components/feed";
 import useSWR from "swr";
 import { useState, useEffect, useContext } from "react";
-import axios from "axios";
 import Login from "../components/Login";
 import { RedditContext } from "../context/RedditContext";
 import { supabase } from "../services/supabaseClient";
