@@ -52,7 +52,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     saveandUpdateUser();
-  }, []);
+  });
 
   return <>{currentUser ? <HomePage myPosts={myPosts} /> : <Login />}</>;
 };

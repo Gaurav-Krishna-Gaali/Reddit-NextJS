@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 const style = {
   profilePic: "h-4 w-4 rounded-full",
   wrapper: "flex items-center space-x-1 text-xs text-[#818384]",
