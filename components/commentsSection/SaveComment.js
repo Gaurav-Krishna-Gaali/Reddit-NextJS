@@ -19,7 +19,7 @@ const SaveComment = ({ postId }) => {
       //   setIsLoading(true);
 
       await supabase.from("comments").insert({
-        author: currentUser.user_metadata_fullname,
+        author: currentUser.user_metadata.full_name,
         text: input,
         postId: postId,
         userEmail: currentUser.email,
