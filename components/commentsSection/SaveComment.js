@@ -1,5 +1,5 @@
 import { RedditContext } from "../../context/RedditContext";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { supabase } from "../../services/supabaseClient";
 
 const style = {
@@ -13,6 +13,10 @@ const style = {
 const SaveComment = ({ postId }) => {
   const { currentUser } = useContext(RedditContext);
   const [input, setInput] = useState("");
+
+  useEffect(() => {
+    if (postId === null) return;
+  });
 
   const saveComment = async () => {
     try {

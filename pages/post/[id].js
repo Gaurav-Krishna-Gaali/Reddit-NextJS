@@ -21,7 +21,7 @@ const PostView = () => {
     if (selectedPost === null) {
       router.push("/");
     }
-  });
+  }, []);
 
   return (
     <div className={style.wrapper}>
@@ -30,9 +30,9 @@ const PostView = () => {
         <div className={style.containerWrapper}>
           <Post {...selectedPost} />
           {/* Save comment */}
-          <SaveComment postId={selectedPost.id} />
+          {selectedPost && <SaveComment postId={selectedPost.id} />}
           {/* {commenta} */}
-          <Comments postId={selectedPost.id} />
+          {selectedPost && <Comments postId={selectedPost.id} />}
         </div>
       </div>
     </div>
