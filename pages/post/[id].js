@@ -4,6 +4,7 @@ import { RedditContext } from "../../context/RedditContext";
 import Header from "../../components/Header";
 import { useRouter } from "next/router";
 import Comments from "../../components/commentsSection/Comments";
+import SaveComment from "../../components/commentsSection/SaveComment";
 
 const style = {
   wrapper: "flex min-h-screen flex-col bg-black text-white",
@@ -28,6 +29,7 @@ const PostView = () => {
         <div className={style.containerWrapper}>
           <Post {...selectedPost} />
           {/* Save comment */}
+          <SaveComment postId={selectedPost.id} />
           {/* {commenta} */}
           <Comments postId={selectedPost.id} />
         </div>

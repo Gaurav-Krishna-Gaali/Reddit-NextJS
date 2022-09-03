@@ -40,6 +40,7 @@ const Comments = ({ postId }) => {
   return (
     <div>
       {console.log(comments, "👽")}
+
       <div className={style.wrapper}>
         {comments &&
           comments.map((comment, id) => (
