@@ -1,7 +1,8 @@
 import Post from "../../components/common/Post";
 import { useContext, useEffect } from "react";
 import { RedditContext } from "../../context/RedditContext";
-import Header from "../../components/Header";
+// import Header from "../../components/Header";
+import Header from "../../components/header";
 import { useRouter } from "next/router";
 import Comments from "../../components/commentsSection/Comments";
 import SaveComment from "../../components/commentsSection/SaveComment";
